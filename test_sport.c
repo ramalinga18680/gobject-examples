@@ -11,9 +11,9 @@ int main () {
     g_print("Is the sport a team game %d and numplayers is %d\n",ret,numPlayers);
 
     Soccer *football = soccer_new();
-        ret = isTeamGame(football);
-        setNumPlayers(football,11);
-        numPlayers = getNumPlayers(football);
+        ret = isTeamGame(SPORT(football));
+        setNumPlayers(SPORT(football),11);
+        numPlayers = getNumPlayers(SPORT(football));
         g_print("Is the sport a team game %d and numplayers is %d\n",ret,numPlayers);
 
     return 0;

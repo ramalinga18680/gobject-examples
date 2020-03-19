@@ -30,7 +30,7 @@ typedef struct _Soccer{
 
 #define SOCCER_GET_PRIVATE(object)	(G_TYPE_INSTANCE_GET_PRIVATE((object), TYPE_SOCCER, SoccerPrivate))
 
-
+Soccer* soccer_new();
 G_END_DECLS
 
 #endif /* SOCCER_H_ */
