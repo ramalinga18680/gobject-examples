@@ -11,18 +11,22 @@
 #include <glib-object.h>
 
 G_BEGIN_DECLS
+/*Remember the Sport structure cannot be defined when using the G_DECLARE_DERIVABLE_TYPE macro */
 G_DECLARE_DERIVABLE_TYPE(Sport, sport, , SPORT, GObject)
+
 typedef struct _SportClass SportClass;
 
 typedef struct _SportPrivate SportPrivate;
 
-struct _SportClass{
+struct _SportClass
+{
 	GObjectClass parent;
 	gint (*getNumPlayers)(Sport *self);
 	void (*setNumPlayers)(Sport *self, gint numPlayers);
 	gboolean (*isTeamGame)(Sport *self);
 };
-struct _SportPrivate{
+struct _SportPrivate
+{
 	gint numPlayers;
 };
 #define TYPE_SPORT (sport_get_type())

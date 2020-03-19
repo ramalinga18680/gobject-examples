@@ -13,11 +13,13 @@
 
 G_BEGIN_DECLS
 
-typedef struct _SoccerClass{
+typedef struct _SoccerClass
+{
 	SportClass parent;
 }SoccerClass;
 
-typedef struct _Soccer{
+typedef struct _Soccer
+{
 	Sport parent_instance;
 }Soccer;
 

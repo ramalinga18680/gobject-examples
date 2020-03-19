@@ -4,17 +4,17 @@
 
 int main () {
 
-    Sport *sport = sport_new();
-    gboolean ret = isTeamGame(sport);
-    setNumPlayers(sport,2);
-    gint numPlayers = getNumPlayers(sport);
-    g_print("Is the sport a team game %d and numplayers is %d\n",ret,numPlayers);
+	Sport *sport = sport_new();
+	gboolean ret = isTeamGame(sport);
+	setNumPlayers(sport,2);
+	gint numPlayers = getNumPlayers(sport);
+	g_print("Is the sport a team game %d and numplayers is %d\n",ret,numPlayers);
 
-    Soccer *football = soccer_new();
-        ret = isTeamGame(SPORT(football));
-        setNumPlayers(SPORT(football),11);
-        numPlayers = getNumPlayers(SPORT(football));
-        g_print("Is the sport a team game %d and numplayers is %d\n",ret,numPlayers);
+	Soccer *football = soccer_new();
+	ret = isTeamGame(SPORT(football));
+	setNumPlayers(SPORT(football),11);
+	numPlayers = getNumPlayers(SPORT(football));
+	g_print("Is the sport a team game %d and numplayers is %d\n",ret,numPlayers);
 
-    return 0;
+	return 0;
 }
